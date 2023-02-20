@@ -1,6 +1,7 @@
 # HackerNews
 
 Данный проект был сгенерирован [Angular CLI](https://github.com/angular/angular-cli) версии 11.1.4.
+[Демо](https://test-hacker-news.netlify.app/)
 
 ## Запуск приложения
 
