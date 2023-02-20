@@ -1,0 +1,85 @@
+@import "src/app/app.component";
+.card{
+  border: solid 1px @greyColorBorder;
+  width: 90%;
+  background-color: @whiteColor;
+  box-sizing: border-box;
+  margin:  20px auto;
+  &-title{
+    padding: 36px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: @blackColor;
+  }
+  &-footer{
+    background-color: @greyColorBg;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 36px;
+    box-sizing: border-box;
+    &__info{
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: @greyColorContent;
+    }
+    &__info > div{
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right: 8px;
+      }
+    }
+    &__info > div:not(:first-child){
+      margin-left: 30px;
+    }
+
+    &__author{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-info{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: flex-end;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        color: @greyColorContent;
+        &__name{
+          font-size: 16px;
+        }
+        &__date{
+          font-size: 12px;
+        }
+      }
+      &-avatar{
+        padding-left: 10px;
+      }
+    }
+  }
+}
+.empty{
+  width: 90%;
+  padding: 21px 36px;
+  display: flex;
+  flex-direction: column;
+  background: @whiteColor;
+  border: 1px solid @greyColorBorder;
+  box-sizing: border-box;
+  margin: 10px auto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: @blackColor;
+}

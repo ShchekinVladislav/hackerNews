@@ -1,0 +1,12 @@
+<app-select [setSelect]="select" (changeSelectValue)="setTag($event)"></app-select>
+<ng-container *ngIf="hits.length > 0">
+  <div class="hits" *ngFor="let hit of hits">
+    <app-card [setHit]="hit"></app-card>
+  </div>
+  <button (click)="nextPage(false)" *ngIf="page > 0">Back page</button>
+  <button (click)="nextPage(true)">Next page</button>
+</ng-container>
+
+<ng-container *ngIf="hits.length === 0 && !loader">
+  <div class="empty">Posts not found</div>
+</ng-container>

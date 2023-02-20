@@ -1,0 +1,9 @@
+<div class="select" *ngIf="select">
+  <div class="select-box" (click)="openList()">
+    <label>{{select.label}}</label>
+    <div class="select-box__value" *ngIf="value">{{value.name}}</div>
+  </div>
+  <div class="select-list" *ngIf="selectList && showList">
+    <div class="select-list__item" *ngFor="let item of selectList" [ngClass]="value && value.id === item.id ? 'active' : ''" (click)="setValue(item)">{{item.name}}</div>
+  </div>
+</div>

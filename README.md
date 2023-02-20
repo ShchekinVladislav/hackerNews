@@ -1,27 +1,34 @@
 # HackerNews
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+Данный проект был сгенерирован [Angular CLI](https://github.com/angular/angular-cli) версии 11.1.4.
 
-## Development server
+## Запуск приложения
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Запустите команту `npm i`, после установки модулей, выполните команду `ng serve` для запуска приложения. Перейдите по адресу `http://localhost:4200/`. 
 
-## Code scaffolding
+## Описание приложения
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+На главной странице отображаются новости по тегу front_page с указанием количества
+комментариев, рейтингом, автором и двумя ссылками: внутренней на просмотр
+комментариев и внешней на сайт новости (если имеется). У каждой новости отображается список тегов.
+При нажатии на тег, или при выборе из select другого тега, новости будут отображаться только с указаным тегом.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Клик по иконке в виде (share) открывает в той же вкладке страницу на внешний сайт со статьей.
+Клик по заголоку статьи, открывает в той же вкладке статью с ее коментариями
+Комментарии выводятся деревом.
+При переходе между компонентами или асинхронных функций или запросов к серверу, появляется loader.
 
-## Running unit tests
+В качестве CSS препроцессора используется `LESS`, с применением методологии `БЭМ`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+В качестве отображения даты написания (статьи, коментария) используется кастомный `pipe` для демонстрации знаний.
 
-## Running end-to-end tests
+Все компоненты за исключение компонентов страниц, используют стратегию обнаружения изменения `onPush`.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Компнонент loader подписывается на изменения `Subject loader$` для простоты отображения данного компонента.
 
-## Further help
+Все `interface` написаны в `CamelCase`.
+Все функции и переменные написаны в `lowerCamelCase`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+P.S  если приложение будет расти то необходимо все  `interface` переносить в папки с компонентами к которым они пренадлежат.

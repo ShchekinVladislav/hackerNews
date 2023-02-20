@@ -1,0 +1,44 @@
+@import "src/app/app.component";
+.comment{
+  width: 90%;
+  padding: 21px 36px;
+  display: flex;
+  flex-direction: column;
+  background: @whiteColor;
+  border: 1px solid @greyColorBorder;
+  box-sizing: border-box;
+  margin: 10px auto;
+  &-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    color: @greyColorContent;
+    &__author{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      svg{
+        padding-right: 10px;
+      }
+    }
+    &__date{
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+  &-text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: @blackColor;
+  }
+  &-comment{
+    margin-top: 10px;
+  }
+}
